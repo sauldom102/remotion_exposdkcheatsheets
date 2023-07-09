@@ -1,0 +1,71 @@
+{
+	"name": "mercabrona",
+	"version": "1.0.0",
+	"description": "Mercabrona rendering engine",
+	"sideEffects": [
+		"*.css"
+	],
+	"scripts": {
+		"start": "remotion preview",
+		"build": "remotion render MyComp out/video.mp4",
+		"upgrade": "remotion upgrade",
+		"upgrade-lambda": "remotion lambda functions rmall -y; remotion lambda functions deploy; remotion lambda sites create src/index.tsx --site-name=prettypreviews",
+		"test": "eslint src --ext ts,tsx,js,jsx && tsc",
+		"render-examples": "node ./render-examples.js",
+		"postinstall": "patch-package",
+		"get-expo-sdks": "ts-node -r tsconfig-paths/register ./src/scripts/expoSDKs/getExpoSDKsInfo.ts",
+		"generate-cheatsheet": "ts-node -r tsconfig-paths/register ./src/scripts/generateCheatsheetPDF.ts"
+	},
+	"repository": {},
+	"license": "UNLICENSED",
+	"devDependencies": {
+		"@remotion/eslint-config": "^4.0.4",
+		"@remotion/gif": "^4.0.4",
+		"@types/express": "^4.17.17",
+		"@types/jsdom": "^21.1.1",
+		"@types/lodash": "^4.14.195",
+		"@types/react": "^18.2.14",
+		"@types/seedrandom": "^3.0.5",
+		"@types/web": "^0.0.103",
+		"autoprefixer": "10.4.14",
+		"css-loader": "^6.8.1",
+		"dangerously-set-html-content": "^1.0.13",
+		"eslint": "^8.44.0",
+		"postcss": "8.4.25",
+		"postcss-loader": "7.3.3",
+		"postcss-preset-env": "9.0.0",
+		"prettier": "^3.0.0",
+		"react-query": "^3.39.3",
+		"style-loader": "^3.3.3",
+		"tailwindcss": "^3.3.2",
+		"tsconfig-paths": "^4.2.0",
+		"typescript": "5.1.6",
+		"webpack": "^5.88.1"
+	},
+	"browser": {
+		"path": false,
+		"fs": false
+	},
+	"dependencies": {
+		"@remotion/cli": "^4.0.4",
+		"@remotion/lambda": "^4.0.4",
+		"@remotion/zod-types": "^4.0.4",
+		"@supercharge/promise-pool": "^2.4.0",
+		"classnames": "^2.3.2",
+		"date-fns": "^2.30.0",
+		"express": "^4.18.2",
+		"fsp-xml-parser": "^1.0.0",
+		"jimp": "^0.22.8",
+		"jsdom": "^22.1.0",
+		"lodash": "^4.17.21",
+		"patch-package": "^7.0.0",
+		"plist": "^3.1.0",
+		"random": "^4.1.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"remotion": "^4.0.4",
+		"remotion-animated": "^1.0.3",
+		"usehooks-ts": "^2.9.1",
+		"zod": "^3.21.4"
+	}
+}

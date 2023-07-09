@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"target": "ES2018",
+		"module": "commonjs",
+		"moduleResolution": "Node16",
+		"jsx": "react-jsx",
+		"outDir": "./dist",
+		"strict": true,
+		"noEmit": true,
+		"lib": ["es2015"],
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/components/*": ["src/components/*"],
+			"@/utils/*": ["src/utils/*"],
+			"@/types/*": ["src/types/*"],
+			"@/stills/*": ["src/stills/*"],
+			"@/compositions/*": ["src/compositions/*"],
+			"@/contexts/*": ["src/contexts/*"],
+			"@/constants": ["src/constants"],
+		},
+		"resolveJsonModule": true
+	},
+}

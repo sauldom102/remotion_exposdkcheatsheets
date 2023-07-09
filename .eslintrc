@@ -1,0 +1,9 @@
+{
+	"extends": "@remotion",
+	"env": {
+		"node": true
+	},
+	"rules": {
+		"@typescript-eslint/ban-types": "off"
+	}
+}
